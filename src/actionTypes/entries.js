@@ -1,0 +1,2 @@
+export const GET_ENTRIES_SUCCESS = 'GET_ENTRIES_SUCCESS';
+export const LOAD_ENTRIES = 'LOAD_ENTRIES';

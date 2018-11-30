@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+before_script:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
+script:
+- npm run build
+- npm test
+after_script:
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+deploy:
+  provider: heroku
+  api_key:
+    secure: ixBj9LeSign5oTjt+WCZyWwWqOkUFMjDSYWx1it4aHmW2cBBGY3VItUlgtO7Jge9jkH5FkRFEsqPZBR4O0H03qkSULzLu98eUfRBiQ/PiCXeXYCunfOBkcT6gZYZFu5aRrrX2gikN7oP3/QrPd0MNnKnGDtWOozN9jRuxg/HomcamrDSr0DTosErJmfCFW/KE85ldYmXqObIKKP1wxvWkmbx63eG0VCz8p9Xowx9QzIFJ3l0rPEqBuI3F55i021/tf9Yq4dUt2N1BSN/0sRi+m2GUJbecMSIL6pJlIjHCZg7gH96uK5Sso0626sfW5QxW3ekwAVHUUqjB1BmVum3vkaXK9YfeUwy8xjxICopsTSs1eucBtK2wLd4HnvdDlwXq1RqeXGs3kdXWNbtDtSWdSx2u8jjdHlWkm2bgWoWzL/f7fiQt/IFUckj2+y034zMNBSGILEcA/XoR/q7dZxGWqGMHThFpmSb/rE50ihDTRa2m+i3m6gqXvSjv1nrglULTQkcGw+iRJVD4PBhdSRbQK/vdis1Ndkstm6fqFvnfWNk9i85lyFxJmnkT8jZPFKFBfWWDQobuhcZhqx4SpycUQq+lXeYnHBJEiqzoaZwqzUWAKdNEer0K2OLrf4d+zYXbk2ntsUjm6zRBR+MtY04iQLSIladMfO9u4ZqiiQqvo0=
+  app:
+    master: lotus-authors-haven
+    develop: lotus-authors-haven-staging
+  on:
+    repo: andela/lotus-ah-frontend
+env:
+  global:
+  - secure: b7/B67HvFzrvl86n6aoDMNTTKRv3Qf6RcbqLiDmuF0KgtWf5SzHmFJxPCTkMK2cXiXYFQTGzSccT2426IKbXBBrr/RE4ovMENuf1fYh2keRvshs6+lLWrvj8J5OCD2ANtFHzOnKwzxKmMeAwt/lfbmb0oyCvjtikGUS4/NLgi+wn0QFz7BtWSMaDwMZz/TWrNs6lRSFHDoJXOWVLr1fimJwwMG1nl8z0BqMCEWywtWISWPw5X2gWA/V2eLfpkUdhKrpF7qaMLARzg2nITq1konWYul24sN4jvHwHz+DDT8IQSm2Umq73hY8QVwj6dvEAyHXk0lDlUs9s59QolEPqrIMGKU9LVXAnBy31E6+aNKEA9Vd7jS97EOjOAQLDkjHtjVZY1QmtKT+oZRjEY+YwScCPQaaLiVYYGGVaaNTX+5BeD10baUBpM/8E1RgqwGOCHCuzVOBFJRTnT/54qXjiUqnz9GUgCmQWExmJb5ClLPcYagWaueQhlqZOXHIcHDoq+6E6An/VhTB+pfnExcLMafZqb+N+CQ/fYjEjyX3Dt8bLK0w0qYWsDGEW9/j7RkkVHVkb5MDyhSLIuccBMeuk86a5eQxxPQUWs/l4sKcf2wTMKOVY7d7mcToz1Hl4MUBKhCufFQRCOftTvMK3bpBFlxUt+xlTGhyUxxllIKNZO9o=
