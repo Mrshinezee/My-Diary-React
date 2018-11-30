@@ -9,6 +9,9 @@ import configureStore from './store/configureStore';
 // components
 import AppRouter from './components/Router';
 
+// styles
+import './styles/index.scss';
+
 
 const store = configureStore();
 
