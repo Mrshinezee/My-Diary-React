@@ -6,7 +6,8 @@ import { Switch, Route, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 // components
-import Landing from './LandingPage/LandingPage.jsx';
+import Landing from './LandingPage/LandingPage';
+import Login from '../containers/login/Login';
 
 const history = createBrowserHistory();
 
@@ -18,6 +19,7 @@ const AppRouter = () => (
   <Router history={history}>
     <Switch>
       <Route exact path='/' component={Landing} />
+      <Route exact path='/login' component={Login} />
     </Switch>
   </Router>
 );
