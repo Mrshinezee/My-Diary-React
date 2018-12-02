@@ -23,14 +23,16 @@ const authReducer = (state = initialState.auth, action) => {
     case AUTHENTICATE_USER:
       return {
         ...state,
-        user: action.payload,
+        user: action.payload.user,
         isAuth: true,
+        token: action.payload.token,
       };
     case LOGOUT_USER:
       return {
         ...state,
         user: {},
         isAuth: false,
+        token: '',
       };
     default:
       return {

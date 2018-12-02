@@ -18,6 +18,7 @@ import {
 } from '../login';
 
 const user = { id: 1, roleId: 2 };
+const token = 'hbfhtjnhth- tnbnnbnjjjtj';
 const message = 'Password required.';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -32,9 +33,13 @@ describe('Actions related with login', () => {
     mock.onPost('/api/v1/auth/login')
       .reply(200, {
         user,
+        token,
         status: 'success',
       });
-
+      const auth = {
+        user,
+        token: `Bearer ${token}`
+      }
     const mockedActions = [
       {
         type: LOGIN_LOADING,
@@ -45,7 +50,7 @@ describe('Actions related with login', () => {
       },
       {
         type: AUTHENTICATE_USER,
-        payload: user,
+        payload: auth,
       },
     ];
 

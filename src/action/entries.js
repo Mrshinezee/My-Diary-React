@@ -12,9 +12,8 @@ const LoadingEntries = () => ({
     type: LOAD_ENTRIES,
   })
 
-const getUserEntries = () => dispatch => {
+const getUserEntries = (token) => dispatch => {
   dispatch(LoadingEntries());
-  const token = localStorage.getItem('diaryToken');
   const url = process.env.SERVER_URL || '';
   return axios
     .get(`${url}/api/v1/entries`,
@@ -31,7 +30,7 @@ const getUserEntries = () => dispatch => {
         payload: response.data
       })
     })
-    .catch((error) => {
+    .catch(() => {
       dispatch({
         type: GET_ENTRIES_SUCCESS,
         payload: []

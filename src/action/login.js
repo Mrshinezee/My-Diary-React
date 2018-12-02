@@ -60,8 +60,13 @@ export const userLoginRequest = userData => (dispatch) => {
   return axios.post(`${url}/api/v1/auth/login`, userData)
     .then((userPayload) => {
         dispatch(success());
-        dispatch(authenticateUser(userPayload.data.user));
-        localStorage.setItem('diaryToken', `Bearer ${userPayload.data.token}`);
+        const token = `Bearer ${userPayload.data.token}`;
+        const auth = {
+          user: userPayload.data.user,
+          token
+        }
+        dispatch(authenticateUser(auth));
+        localStorage.setItem('diaryToken', token);
         localStorage.setItem('diaryName', userPayload.data.firstName);
         const user = JSON.stringify(userPayload.data.user);
         localStorage.setItem('diaryUser', user);

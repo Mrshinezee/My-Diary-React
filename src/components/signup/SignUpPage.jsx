@@ -14,6 +14,26 @@ import SignUpForm from './SignUpForm';
  */
 const SignUpPage = props => (
     <Fragment>
+         <div className="menu-links">
+            <div id="menu-links-left">
+                <span><a href="index.html">MY-DIARY</a></span>
+            </div>
+
+            <div className="menu-icon">
+                <label htmlFor="menu-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <input type="checkbox" id="menu-check" />
+            <div className="menu-links-right">
+                <a href="register">Sign Up</a>
+                <a href="login">Login</a>
+            </div>
+        </div>
+      
         <div id="main">
             <div className="centring-div">
                 <div id="topic">

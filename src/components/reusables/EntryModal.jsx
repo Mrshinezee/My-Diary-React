@@ -1,11 +1,10 @@
 // react libraries
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 
 // third-party libraries
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-import Editable from 'react-contenteditable';
 
 
 // components
@@ -47,7 +46,6 @@ export default class Report extends Component {
         const { id, singleEntry} = this.props;
         singleEntry(id)
         .then(ent => {
-            console.log('ent', ent.entry[0]);
             this.setState({
                 entrytitle: ent.entry[0].entrytitle,
                 entrycontent: ent.entry[0].entrycontent,
@@ -84,7 +82,7 @@ export default class Report extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <Fragment>
                 <Modal
                     isOpen={this.state.isModalOpen}
                     onAfterOpen={this.afterOpenModal}
@@ -118,7 +116,7 @@ export default class Report extends Component {
                     </form>
                 </Modal>
                 <button className="view" onClick={this.openModal} ></button>
-            </React.Fragment>
+            </Fragment>
         );
     }
 }

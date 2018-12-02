@@ -96,7 +96,7 @@ export const updateEntry = (update, id) => dispatch => {
     )
     .then((response) => {
       dispatch({
-        type: GET_ENTRY_SUCCESS,
+        type: UPDATE_ENTRY_SUCCESS,
         payload: response.data
       })
     })

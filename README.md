@@ -6,8 +6,8 @@
   diary that can be accessed from anywhere in the world. 
   
 # badges 
-
-  https://travis-ci.org/Mrshinezee/My-Diary-React.svg?branch=develop(https://travis-ci.org/Mrshinezee/My-Diary-React)
+[![Build Status](https://travis-ci.org/Mrshinezee/My-Diary-React.svg?branch=develop)](https://travis-ci.org/Mrshinezee/My-Diary-React)
+[![Coverage Status](https://coveralls.io/repos/github/Mrshinezee/My-Diary-React/badge.svg?branch=develop)](https://coveralls.io/github/Mrshinezee/My-Diary-React?branch=develop)
   
   
 

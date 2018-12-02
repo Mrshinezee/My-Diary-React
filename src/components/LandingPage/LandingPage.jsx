@@ -9,7 +9,7 @@ const Landing = () => (
   <Fragment>
      <div className="menu-links">
           <div id="menu-links-left">
-            <span><a href="index.html">MY-DIARY</a></span>
+            <span><a href="/">MY-DIARY</a></span>
           </div>
     
           <div className="menu-icon">
@@ -22,8 +22,8 @@ const Landing = () => (
     
           <input type="checkbox" id="menu-check" />
           <div className="menu-links-right">
-            <a href="sign-up.html">Sign Up</a>
-            <a href="login.html">Login</a>
+            <a href="register">Sign Up</a>
+            <a href="login">Login</a>
           </div>      
     </div>
     
