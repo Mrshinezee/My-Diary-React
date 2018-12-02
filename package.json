@@ -84,6 +84,7 @@
     "react": "^16.6.0",
     "react-contenteditable": "^3.2.1",
     "react-dom": "^16.6.0",
+    "react-loader": "^2.4.5",
     "react-modal": "^3.6.1",
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",

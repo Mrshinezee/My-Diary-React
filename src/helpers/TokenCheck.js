@@ -11,6 +11,7 @@ const auth = {
   * @return {object} object
   */
   verifyToken(bearerToken) {
+    console.log('bearerToken',bearerToken);
     const bearer = bearerToken.split(' ');
     const token = bearer[1];
     let decoded = {};
@@ -33,11 +34,13 @@ const auth = {
   * @return {object} object
   */
   verifyUserToken(token) {
+    console.log('token',token)
     if (!token) {
       return false;
     }
-
+    console.log('token',token)
     const decoded = auth.verifyToken(token);
+    console.log('decoded',decoded)
     const currentTime = Date.now() / 1000;
     if (decoded.exp < currentTime) {
       return false;

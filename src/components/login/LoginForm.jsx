@@ -1,9 +1,10 @@
 // react libraries
 import React, { Component, Fragment } from 'react';
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 // third-party libraries
 import PropTypes from 'prop-types';
+import Loader from 'react-loader';
 
 // components
 
@@ -15,9 +16,10 @@ import PropTypes from 'prop-types';
  * @extends {Component}
  */
 class LoginForm extends Component {
+
   state = {
-    email: '',
-    password: ''
+    email: 'shinezee54@gmail.com',
+    password: 'shine1234',
   }
 
   onChange = (event) => {
@@ -30,15 +32,27 @@ class LoginForm extends Component {
     login(this.state);
   }
 
+  
+  // setTimeout(() => this.props.pullEntries(), 2000);
+
   render() {
-    // if (props.auth.isAuth === true) {
-    //   return (
-    //         <Redirect to='/'/>
-    //   );
-    // }
+    const { props } = this;
+    const loading = props.auth.login.processing ? { display: 'block' } : { display: 'none' };
+    if (props.auth.isAuth === true) {
+      // setTimeout(() => {
+        return(
+          <Redirect to='/allEntry' />
+        )
+      // }, 1000);
+    }
+
+
     return (
       <Fragment>
         <div id="authform">
+          <div style={loading}>
+            <Loader color="#007bff" speed={1} className="spinner" />
+          </div>
           <form onSubmit={this.onSubmit}>
             <div className="centring-div">
               <h4>LOG IN</h4>
@@ -51,7 +65,7 @@ class LoginForm extends Component {
             </p>
             <p id="emailError" className="alert-class"></p>
             <p>
-              <input type="password" id="password"  name="password" placeholder="Password" value={this.state.password}
+              <input type="password" id="password" name="password" placeholder="Password" value={this.state.password}
                 onChange={this.onChange} required />
             </p>
             <p id="passwordError" className="alert-class"></p>
@@ -66,7 +80,8 @@ class LoginForm extends Component {
 }
 LoginForm.propTypes = {
   login: PropTypes.func,
-  auth: PropTypes.object
+  history: PropTypes.func,
+  auth: PropTypes.object,
 };
 
 export default LoginForm;

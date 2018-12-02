@@ -30,8 +30,8 @@ const LoginPage = props => (
 
             <input type="checkbox" id="menu-check" />
             <div className="menu-links-right">
-                <a href="sign-up.html">Sign Up</a>
-                <a href="login.html">Login</a>
+                <a href="register">Sign Up</a>
+                <a href="login">Login</a>
             </div>
         </div>
         <div id="main">

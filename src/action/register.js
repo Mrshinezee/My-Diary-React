@@ -52,8 +52,13 @@ export const userRegisterRequest = userData => (dispatch) => {
   return axios.post(`${url}/api/v1/auth/signup`, userData)
     .then((userPayload) => {
         dispatch(success());
-        dispatch(authenticateUser(userPayload.data.data));
-        localStorage.setItem('diaryToken', `Bearer ${userPayload.data.token}`);
+        const token = `Bearer ${userPayload.data.token}`;
+        const auth = {
+          user: userPayload.data.data,
+          token
+        }
+        dispatch(authenticateUser(auth));
+        localStorage.setItem('diaryToken', token);
         localStorage.setItem('diaryName', userPayload.data.firstName);
         const user = JSON.stringify(userPayload.data.data);
         localStorage.setItem('diaryUser', user);

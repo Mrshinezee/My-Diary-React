@@ -22,7 +22,11 @@ const checker = Auth.verifyUserToken(token);
 
 if (checker) {
   const user = localStorage.getItem('diaryUser');
-  store.dispatch(authenticateUser(user));
+  const data = {
+      user,
+      token
+  };
+  store.dispatch(authenticateUser(data));
 } else {
   store.dispatch(logOutUser());
 }

@@ -35,12 +35,12 @@ exports[`Login component renders the Login component 1`] = `
       className="menu-links-right"
     >
       <a
-        href="sign-up.html"
+        href="register"
       >
         Sign Up
       </a>
       <a
-        href="login.html"
+        href="login"
       >
         Login
       </a>

@@ -16,7 +16,8 @@ describe('auth reducer', () => {
     ).toEqual(
       {
         isAuth: false,
-        user: {}
+        user: {},
+        token: ""
       }
     );
   });

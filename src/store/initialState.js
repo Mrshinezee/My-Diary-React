@@ -15,6 +15,11 @@ const initialState = {
   
       },
       isAuth: false,
+      token: '',
+    },
+    userEntry: {
+      entries: [],
+      loading: false
     },
   };
   

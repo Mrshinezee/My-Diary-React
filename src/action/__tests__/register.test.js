@@ -17,6 +17,7 @@ import {
     userRegisterRequest,
 } from '../register';
 
+const token = 'hbfhtjnhth- tnbnnbnjjjtj';
 const data = { id: 1, roleId: 2 };
 const errors = {}
 const middlewares = [thunk];
@@ -32,9 +33,13 @@ describe('Actions related with login', () => {
     mock.onPost('/api/v1/auth/signup')
       .reply(200, {
         data,
+        token,
         status: 'success',
       });
-
+      const auth = {
+        user: data,
+        token: `Bearer ${token}`
+      }
     const mockedActions = [
       {
         type: REGISTER_LOADING,
@@ -45,7 +50,7 @@ describe('Actions related with login', () => {
       },
       {
         type: AUTHENTICATE_USER,
-        payload: data,
+        payload: auth,
       },
     ];
 
