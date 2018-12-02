@@ -8,7 +8,8 @@ const initialState = {
         error: '',
       },
       signup: {
-  
+        processing: false,
+        errors: {},
       },
       user: {
   

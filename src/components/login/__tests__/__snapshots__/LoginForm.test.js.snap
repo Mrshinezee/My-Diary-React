@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component renders the Login component 1`] = `
+<Fragment>
+  <div
+    className="menu-links"
+  >
+    <div
+      id="menu-links-left"
+    >
+      <span>
+        <a
+          href="index.html"
+        >
+          MY-DIARY
+        </a>
+      </span>
+    </div>
+    <div
+      className="menu-icon"
+    >
+      <label
+        htmlFor="menu-check"
+      >
+        <span />
+        <span />
+        <span />
+      </label>
+    </div>
+    <input
+      id="menu-check"
+      type="checkbox"
+    />
+    <div
+      className="menu-links-right"
+    >
+      <a
+        href="sign-up.html"
+      >
+        Sign Up
+      </a>
+      <a
+        href="login.html"
+      >
+        Login
+      </a>
+    </div>
+  </div>
+  <div
+    id="main"
+  >
+    <div
+      className="centring-div"
+    >
+      <div
+        id="topic"
+      >
+        <div
+          id="logo"
+        />
+      </div>
+    </div>
+    <div
+      className="centring-div"
+    >
+      <h2
+        id="motto"
+      >
+        Your Daily Companion
+      </h2>
+    </div>
+    <LoginForm
+      auth={
+        Object {
+          "isAuthenticated": true,
+        }
+      }
+      login={[MockFunction]}
+    />
+    <div
+      className="centring-div"
+    >
+      <span
+        id="no_account"
+      >
+        Not registered? 
+      </span>
+      <a
+        href="sign-up.html"
+      >
+         Sign up today?
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;

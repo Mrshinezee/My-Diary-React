@@ -5,7 +5,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 // components
-import Logo from '../reusables/Logo';
 import LoginForm from './LoginForm';
 
 /**

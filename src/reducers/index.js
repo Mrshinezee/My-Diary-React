@@ -4,6 +4,7 @@ import { combineReducers } from 'redux';
 // reducers
 import login from './login';
 import auth from './auth';
+import signup from './register';
 
 /**
  * @desc combines all the reducers
@@ -11,4 +12,5 @@ import auth from './auth';
 export default combineReducers({
   login,
   auth,
+  signup,
 });

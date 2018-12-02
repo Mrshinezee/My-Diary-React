@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component renders the Login component 1`] = `
+<Fragment>
+  <div
+    id="main"
+  >
+    <div
+      className="centring-div"
+    >
+      <div
+        id="topic"
+      >
+        <div
+          id="logo"
+        />
+      </div>
+    </div>
+    <SignUpForm
+      register={[MockFunction]}
+    />
+    <div
+      className="centring-div"
+    >
+      <span
+        id="no_account"
+      >
+        Already have an account ?
+      </span>
+      <a
+        href="login.html"
+      >
+         Login 
+      </a>
+    </div>
+  </div>
+  <script
+    src="js/signUp.js"
+  />
+  <script
+    src="js/logout.js"
+  />
+  <footer>
+    <p>
+      My-Diary, Copyright © 2018 
+    </p>
+  </footer>
+</Fragment>
+`;

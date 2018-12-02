@@ -1,7 +1,9 @@
 // react libraries
 import React, { Component, Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
+// third-party libraries
+import PropTypes from 'prop-types';
 
 // components
 
@@ -29,7 +31,6 @@ class LoginForm extends Component {
   }
 
   render() {
-    const { props } = this;
     // if (props.auth.isAuth === true) {
     //   return (
     //         <Redirect to='/'/>
@@ -63,5 +64,9 @@ class LoginForm extends Component {
     );
   }
 }
+LoginForm.propTypes = {
+  login: PropTypes.func,
+  auth: PropTypes.object
+};
 
 export default LoginForm;

@@ -1,8 +1,59 @@
-# Authors Haven - A Social platform for the creative at heart
+# My-Diary
 
-[![Build Status](https://travis-ci.org/andela/lotus-ah-frontend.svg?branch=develop)](https://travis-ci.org/andela/lotus-ah-frontend)  [![Test Coverage](https://api.codeclimate.com/v1/badges/9ba19e07fb824d73dd52/test_coverage)](https://codeclimate.com/github/andela/lotus-ah-frontend/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/9ba19e07fb824d73dd52/maintainability)](https://codeclimate.com/github/andela/lotus-ah-frontend/maintainability)
+# Description
 
-## Vision
+  MyDiary is an online journal where users can pen down their thoughts and feelings. An online 
+  diary that can be accessed from anywhere in the world. 
+  
+# badges 
 
-Create a community of like minded authors to foster inspiration and innovation
-by leveraging the modern web.
+  https://travis-ci.org/Mrshinezee/My-Diary-React.svg?branch=develop(https://travis-ci.org/Mrshinezee/My-Diary-React)
+  
+  
+
+# Features:
+
+# Users
+
+- Sign up page for new users and Login page for registered users
+- Pages for users to create, edit or cancel diary Entry
+- User can also see all diary entry made
+
+
+# Installation
+
+- filepath> git clone https://github.com/Mrshinezee/My-Diary
+- npm install
+- npm start
+
+
+# API
+
+- Heroku - https://my-diary-collins.herokuapp.com/api/v1
+
+ | Method | Description | Endpoints      | Role |
+ | ------ | ----------- | -------------- | ---- |
+ | POST |Create new diary entry | /api/v1/entries| User |
+ | GET | Get all diary entry | /api/v1/entries | User |
+ | GET | Get a diary entry by ID (ID must be a number) | /api/v1/entries/ | User |
+ | PUT | Update existing diary entry | /api/v1/entries/ | User |
+ | DELETE | Delete existing diary entry | /api/v1/entries/ | User |
+ 
+
+
+# UI Template
+
+- https://mrshinezee.github.io/My-Diary/UI/
+
+# Front-end app
+- https://my-diary-collins.herokuapp.com/
+
+
+# Project Management Tool
+
+- https://www.pivotaltracker.com/n/projects/2183563
+
+# Author
+- IJEOMAH COLLINS ARINZE
+
+  
