@@ -7,17 +7,30 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
 // components
+import Auth from './helpers/TokenCheck';
 import AppRouter from './components/Router';
+
+// action
+import { authenticateUser, logOutUser } from './action/auth';
 
 // styles
 import './styles/index.scss';
 
-
 const store = configureStore();
+const token = localStorage.getItem('diaryToken');
+const checker = Auth.verifyUserToken(token);
 
-ReactDOM.render(
+if (checker) {
+  const user = localStorage.getItem('diaryUser');
+  store.dispatch(authenticateUser(user));
+} else {
+  store.dispatch(logOutUser());
+}
+
+ReactDOM.render((
     <Provider store={store}>
     <AppRouter />
-    </Provider>,
+    </Provider>),
 document.getElementById('root'));
+
 
