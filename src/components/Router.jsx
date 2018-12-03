@@ -13,6 +13,7 @@ import AllEntry from '../containers/allEntry/AllEntry';
 import Logout from './logout/Logout';
 import Entry from '../containers/entry/Entry';
 // import AuthenticatedRoute from './AuthenticatedRoute';
+import Setting from '../containers/setting/Setting';
 
 const history = createBrowserHistory();
 
@@ -29,6 +30,7 @@ const AppRouter = () => (
       <Route exact path='/allEntry' component={AllEntry} />
       <Route exact path='/Logout' component={Logout} />
       <Route exact path='/entry' component={Entry} />
+      <Route exact path='/setting' component={Setting} />
     </Switch>
   </Router>
 );

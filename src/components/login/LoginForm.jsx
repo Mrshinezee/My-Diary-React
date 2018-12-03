@@ -6,8 +6,6 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Loader from 'react-loader';
 
-// components
-
 
 /**
  * @param {func} event

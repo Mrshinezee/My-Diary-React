@@ -12,13 +12,8 @@ import EntryModal from '../reusables/EntryModal';
  */
 class AllEntryPage extends Component {
     modelDelete= (event) => {
+        const { token } = this.props
         const { currentTarget: { value: entryid } } = event;
-        // const { 
-        //   deleteUserRequest,
-        //   history,
-        //   fetchUserRequests
-        // } = this.props;
-    
         swal({
           title: "Are you sure?",
           text: "If you click 'OK', this entry will be removed from your diary",
@@ -29,8 +24,7 @@ class AllEntryPage extends Component {
         .then((remove) => {
           if (remove) {
             this.props.deleteEntry(entryid);
-            // history.push('/requests');
-            this.props.pullEntries();
+            this.props.pullEntries(token);
           }
         });
       }
@@ -98,5 +92,6 @@ AllEntryPage.propTypes = {
     singleEntry: PropTypes.func,
     entry: PropTypes.object,
     entries: PropTypes.object,
+    token: PropTypes.string,
 };
 export default AllEntryPage;

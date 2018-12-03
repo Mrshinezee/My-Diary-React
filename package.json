@@ -10,7 +10,8 @@
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.dev.js --hot --color --open",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls"
   },
   "jest": {
     "transform": {
