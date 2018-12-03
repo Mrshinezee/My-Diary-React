@@ -40,7 +40,7 @@ const SignUpPage = props => (
                     <div id="logo"></div>
                 </div>
             </div>
-            <SignUpForm register={props.register}/>
+            <SignUpForm register={props.register} auth={props.auth}/>
             <div className="centring-div">
               <span id="no_account">Already have an account ?</span>
               <a href="login.html"> Login </a>

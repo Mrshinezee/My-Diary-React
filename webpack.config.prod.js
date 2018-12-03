@@ -14,6 +14,7 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
+        SERVER_URL: JSON.stringify('https://my-diary-collins.herokuapp.com'),
       },
     }),
   ],
