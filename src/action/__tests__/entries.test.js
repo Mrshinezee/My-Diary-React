@@ -49,7 +49,7 @@ describe('Actions related with getting a user entry', () => {
   });
   it('Get user entry not successful', () => {
     mock.onPost('/api/v1/entries')
-      .reply(401, {
+      .reply(404, {
         status: 'failed',
         entries,
         message

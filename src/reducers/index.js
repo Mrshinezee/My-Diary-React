@@ -6,6 +6,7 @@ import login from './login';
 import auth from './auth';
 import signup from './register';
 import entries from './entries';
+import entry from './entry';
 
 /**
  * @desc combines all the reducers
@@ -15,4 +16,5 @@ export default combineReducers({
   auth,
   signup,
   entries,
+  entry,
 });

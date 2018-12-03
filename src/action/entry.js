@@ -12,6 +12,7 @@ import {
   DELETE_ENTRY,
   DELETE_ENTRY_SUCCESS,
   ENTRY_FAILURE,
+  CLEAR_ENTRY_MESSAGE,
 } from '../actionTypes/entry';
 
 const processGetEntry = () => ({
@@ -31,6 +32,9 @@ const processCreateEntry = () => ({
 const entryFailure = (data) => ({
   type: ENTRY_FAILURE,
   payload: data
+})
+export const clearEntry = () => ({
+  type: CLEAR_ENTRY_MESSAGE,
 })
 
 // Get Entry
