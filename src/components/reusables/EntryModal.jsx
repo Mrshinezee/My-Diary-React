@@ -6,6 +6,9 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
+// style
+import 'react-toastify/dist/ReactToastify.min.css';
+
 
 // components
 // import Button from '../reusables/button/Button';
@@ -51,12 +54,11 @@ export default class Report extends Component {
                 entrycontent: ent.entry[0].entrycontent,
             });
         })
-        // console.log(entry.entry);
     };
 
     closeModal = () => {
         this.setState({ isModalOpen: false });
-        // this.props.clear();
+
     };
 
     handleShowEditor = () => {
@@ -80,7 +82,9 @@ export default class Report extends Component {
         },
     });
 
+
     render() {
+        console.log('modelprops', this.props);
         return (
             <Fragment>
                 <Modal
@@ -124,4 +128,5 @@ Report.propTypes = {
     updateEntry: PropTypes.func,
     id: PropTypes.number,
     singleEntry: PropTypes.func,
+    entry: PropTypes.object,
 };

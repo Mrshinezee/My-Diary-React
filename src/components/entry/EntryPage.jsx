@@ -2,7 +2,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
-// component
+
+// style
 import 'react-toastify/dist/ReactToastify.min.css';
 
 /**
@@ -51,7 +52,7 @@ class EntryPage extends Component {
                     <input type="checkbox" id="menu-check" />
                     <div className="menu-links-right">
                         <a href="/allEntry"><i className="fa fa-book"></i> Entries</a>
-                        <a href="/"><i className="fa fa-user"></i> <span id='diaryName'></span> </a>
+                        <a href="/setting"><i className="fa fa-user"></i> <span id='diaryName'></span> </a>
                         <a href="/Logout"><i className="fa fa-sign-out"></i> Logout</a>
                     </div>
                 </div>

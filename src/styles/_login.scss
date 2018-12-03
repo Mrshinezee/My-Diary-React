@@ -357,6 +357,38 @@ textarea{
          background: url(http://res.cloudinary.com/dowmiccxo/image/upload/v1531315940/edit.png) no-repeat;
          background-size: 100%;
       }   
+      #counter{
+        width:60%;
+        height: 100px;
+        margin: auto;
+        color:#4484CE;
+        border: 1px solid #4484CE;
+        padding: auto;
+        text-align: center;
+    }
+    .accountFormHeader {
+      font-size: 20px;
+      font-weight: bold;
+      margin: auto;
+      color: #4484CE;
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+  }
+  .containerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top:40px;
+
+  }
+  #settingDiv{
+    width: 80%;
+    background-color: white;
+    align-content: center;
+    padding: 10px;
+}
     .menu-links {
         background:#4484CE;
         position:fixed;

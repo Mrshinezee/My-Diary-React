@@ -6,7 +6,7 @@ import AllEntryPage from '../../components/allEntry/AllEntryPage';
 
 // action
 import getUserEntries from '../../action/entries';
-import { deleteEntry, updateEntry, getEntry } from '../../action/entry';
+import { deleteEntry, updateEntry, getEntry, clearEntry } from '../../action/entry';
 
 
 const mapDispatchToProps = dispatch => ({
@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
   pullEntries: (token) => dispatch(getUserEntries(token)),
   updateEntry: (update, id) => dispatch(updateEntry(update, id)),
   singleEntry: id => dispatch(getEntry(id)),
-
+  clearEntry: () => dispatch(clearEntry())
 });
 
 const mapStateToProps = state => ({
