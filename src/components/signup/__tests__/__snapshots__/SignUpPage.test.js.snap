@@ -61,6 +61,11 @@ exports[`Login component renders the Login component 1`] = `
       </div>
     </div>
     <SignUpForm
+      auth={
+        Object {
+          "isAuthenticated": true,
+        }
+      }
       register={[MockFunction]}
     />
     <div

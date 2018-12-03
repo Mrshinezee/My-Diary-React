@@ -1,6 +1,6 @@
 // react libraries
 import React, { Component, Fragment } from 'react';
-
+import { Redirect } from 'react-router-dom';
 
 // components
 
@@ -30,12 +30,12 @@ class SignUpForm extends Component {
     }
 
     render() {
-        // const { props } = this;
-        // if (props.auth.isAuth === true) {
-        //   return (
-        //         <Redirect to='/'/>
-        //   );
-        // }
+        const { props } = this;
+        if (props.auth.isAuth === true) {
+          return (
+                <Redirect to='/allentry'/>
+          );
+        }
         return (
             <Fragment>
                 <div id="authform">
